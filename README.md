@@ -110,34 +110,14 @@ The data should be organized in the following format:
   ...
   └── semanticstf.yaml
 ```
-We provide class annotations in 'semanticstf.yaml'
 
 ## Code
-### Setup
-```bash
-python setup.py develop
-```
-### Training
-```bash
-different loss items should be changed in configs/nuscenes/det/centerhead/lssfpn/camera/256x704/swint/convfuser.yaml
-
-and different backbone networks can be choosed, including swinT, vitaev2, and bevformer in configs/nuscenes/det/centerhead/lssfpn/camera/256x704/
-
-torchpack dist-run -np 8 python tools/train.py configs/nuscenes/det/centerhead/lssfpn/camera/256x704/swint/convfuser.yaml --data.samples_per_gpu 3 --max_epochs 20 --data.workers_per_gpu 6 --run-dir swinT-twobranchesloss --load_from ../bevfusion-main/pretrained/bevfusion-det.pth
-```
-### Evaluation
-```bash
-torchpack dist-run -np 8 python tools/test.py configs/nuscenes/det/centerhead/lssfpn/camera/256x704/swint/convfuser.yaml --xxx.pth --eval bbox
-```
-
+Coming Soon...
 ## Statement
-@inproceedings{zhao2024simdistill,
-title={SimDistill: Simulated Multi-Modal Distillation for BEV 3D Object Detection},
-author={Zhao, Haimei and Zhang, Qiming and Zhao, Shanshan and Chen, Zhe and Zhang, Jing and Tao, Dacheng},
-booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-volume={38},
-number={7},
-pages={7460--7468},
-year={2024}
+@article{zhao2024unimix,
+  title={UniMix: Towards Domain Adaptive and Generalizable LiDAR Semantic Segmentation in Adverse Weather},
+  author={Zhao, Haimei and Zhang, Jing and Chen, Zhuo and Zhao, Shanshan and Tao, Dacheng},
+  journal={arXiv preprint arXiv:2404.05145},
+  year={2024}
 }
 
