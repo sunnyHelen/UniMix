@@ -23,7 +23,7 @@
 LiDAR semantic segmentation (LSS) is a critical task in autonomous driving and has achieved promising progress. However, prior LSS methods are conventionally investi- gated and evaluated on datasets within the same domain in clear weather. The robustness of LSS models in un- seen scenes and all weather conditions is crucial for ensur- ing safety and reliability in real applications. To this end, we propose UniMix, a universal method that enhances the adaptability and generalizability of LSS models. UniMix first leverages physically valid adverse weather simulation to construct a Bridge Domain, which serves to bridge the domain gap between the clear weather scenes and the ad- verse weather scenes. Then, a Universal Mixing operator is defined regarding spatial, intensity, and semantic distri- butions to create the intermediate domain with mixed sam- ples from given domains. Integrating the proposed two tech- niques into a teacher-student framework, UniMix efficiently mitigates the domain gap and enables LSS models to learn weather-robust and domain-invariant representations. We devote UniMix to two main setups: 1) unsupervised do- main adaption, adapting the model from the clear weather source domain to the adverse weather target domain; 2) domain generalization, learning a model that generalizes well to unseen scenes in adverse weather. Extensive exper- iments validate the effectiveness of UniMix across different tasks and datasets, all achieving superior performance over state-of-the-art methods.
 ## Method
 
-![the framework figure](./figs/mainfigNew_CVPR.pdf "framework")
+![the framework figure](./figs/mainfigNew_CVPR.png "framework")
 ## Results
 
 ### Quantitative results on Nuscenes validation set
